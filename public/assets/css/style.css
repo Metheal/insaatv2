@@ -1,0 +1,123 @@
+#successModal .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100% - 1rem);
+}
+
+#successModal .modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#successModal .modal-header {
+    border-bottom: none;
+    display: none;
+    /* Hide the header */
+}
+
+#successModal .modal-footer {
+    border-top: none;
+    display: none;
+    /* Hide the footer */
+}
+
+#successModal .modal-body {
+    text-align: center;
+    padding: 2rem;
+}
+
+#successModal svg {
+    width: 100px;
+    display: block;
+    margin: 40px auto 0;
+}
+
+#successModal .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+#successModal .path.circle {
+    animation: dash .9s ease-in-out;
+}
+
+#successModal .path.check {
+    stroke-dashoffset: -100;
+    animation: dash-check .9s .35s ease-in-out forwards;
+}
+
+#successModal p {
+    text-align: center;
+    margin: 20px 0 60px;
+    font-size: 1.25em;
+    color: #73AF55;
+    /* Success color */
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+/* Custom Table Styles */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table td,
+.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Action Button Styles */
+.table .btn {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-warning {
+    color: #ffffff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Last Updated Footer */
+.card-footer {
+    background-color: #f8f9fa;
+    font-size: 0.875rem;
+}
